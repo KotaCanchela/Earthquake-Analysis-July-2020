@@ -3,7 +3,7 @@ import json
 from plotly.graph_objs import Scattergeo, Layout
 from plotly import offline
 
-# Explore the structure of the data.
+# Initial data load.
 filename = ""
 with open(filename) as f:
     all_eq_data = json.load(f)
@@ -36,7 +36,7 @@ data = [
         "type": "scattergeo",
         "lon": lons,
         "lat": lats,
-        'text': hover_texts,
+        "text": hover_texts,
         "marker": {
             "size": [3 * mag for mag in mags],
             "color": mags,
